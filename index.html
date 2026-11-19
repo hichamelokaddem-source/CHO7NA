@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHO7NA — Sourcing, Import & Logistique Internationale</title>
+  <meta name="description" content="De n'importe où. Directement chez vous. CHO7NA connecte les entreprises marocaines aux fournisseurs mondiaux et aux solutions logistiques." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #101D2C;
+      --ivory: #F4F1E9;
+      --orange: #E8A34B;
+      --steel: #55738C;
+      --white: #FFFFFF;
+      --font-primary: 'Manrope', 'Inter', system-ui, sans-serif;
+      --font-secondary: 'Inter', 'Manrope', system-ui, sans-serif;
+      --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow-sm: 0 4px 12px rgba(16, 29, 44, 0.06);
+      --shadow-md: 0 12px 32px rgba(16, 29, 44, 0.10);
+      --shadow-lg: 0 24px 64px rgba(16, 29, 44, 0.12);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      background-color: var(--ivory);
+      color: var(--navy);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* RTL support */
+    [dir="rtl"] {
+      direction: rtl;
+    }
+    [dir="rtl"] .nav-links {
+      flex-direction: row-reverse;
+    }
+    [dir="rtl"] .hero-content {
+      text-align: right;
+    }
+    [dir="rtl"] .service-card .card-arrow {
+      transform: rotate(180deg);
+    }
+    [dir="rtl"] .timeline-step {
+      text-align: right;
+    }
+    [dir="rtl"] .footer-grid {
+      direction: rtl;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      font-family: var(--font-primary);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+      font-weight: 600;
+    }
+
+    .text-ivory { color: var(--ivory); }
+    .text-orange { color: var(--orange); }
+    .text-steel { color: var(--steel); }
+    .text-white { color: var(--white); }
+
+    .subheadline {
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--steel);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 36px;
+      font-family: var(--font-primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: var(--transition);
+      letter-spacing: 0.02em;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--navy);
+    }
+    .btn-primary:hover {
+      background: #d4913a;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(232, 163, 75, 0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+    }
+    .btn-outline:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--navy);
+      border: 1.5px solid var(--navy);
+    }
+    .btn-outline-dark:hover {
+      background: var(--navy);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 12px 28px;
+      font-size: 0.85rem;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(16, 29, 44, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: var(--transition);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .logo span {
+      color: var(--orange);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--orange);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .lang-switcher {
+      display: flex;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 40px;
+      padding: 4px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: var(--font-primary);
+    }
+
+    .lang-btn.active {
+      background: var(--orange);
+      color: var(--navy);
+    }
+
+    .lang-btn:hover:not(.active) {
+      color: var(--white);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--white);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      background: var(--navy);
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: 0.35;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(16, 29, 44, 0.85) 0%, rgba(16, 29, 44, 0.4) 100%);
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .hero-content {
+      max-width: 780px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(232, 163, 75, 0.15);
+      border: 1px solid rgba(232, 163, 75, 0.3);
+      color: var(--orange);
+      padding: 8px 20px;
+      border-radius: 60px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.15rem;
+      max-width: 620px;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    .section-header {
+      margin-bottom: 60px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      max-width: 720px;
+    }
+
+    .section-header .subheadline {
+      margin-top: 16px;
+    }
+
+    /* ===== INTRO SECTION ===== */
+    .intro-section {
+      background: var(--ivory);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .intro-text h2 {
+      margin-bottom: 24px;
+    }
+
+    .intro-text p {
+      color: var(--steel);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .intro-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      aspect-ratio: 4/5;
+      background: var(--steel);
+    }
+
+    .intro-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .intro-image:hover img {
+      transform: scale(1.03);
+    }
+
+    .intro-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(16, 29, 44, 0.1);
+    }
+
+    .stat-item h4 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .stat-item p {
+      font-size: 0.85rem;
+      color: var(--steel);
+      margin-bottom: 0;
+    }
+
+    /* ===== SERVICES ===== */
+    .services-section {
+      background: var(--white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--ivory);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--orange);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-card:hover {
+      background: var(--white);
+      border-color: rgba(16, 29, 44, 0.08);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-6px);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: rgba(232, 163, 75, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--orange);
+      font-size: 1.4rem;
+      transition: var(--transition);
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--orange);
+      color: var(--navy);
+      transform: scale(1.05);
+    }
+
+    .service-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      color: var(--steel);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+
+    .service-link i {
+      transition: var(--transition);
+      font-size: 0.8rem;
+    }
+
+    .service-card:hover .service-link {
+      color: var(--orange);
+    }
+
+    .service-card:hover .service-link i {
+      transform: translateX(4px);
+    }
+
+    [dir="rtl"] .service-card:hover .service-link i {
+      transform: translateX(-4px);
+    }
+
+    /* ===== WHY CHO7NA ===== */
+    .why-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .why-section .section-label {
+      color: var(--orange);
+    }
+
+    .why-section .subheadline {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .why-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: var(--steel);
+    }
+
+    .why-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .why-content h2 {
+      margin-bottom: 24px;
+    }
+
+    .why-content > p {
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 40px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .why-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .why-item-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(232, 163, 75, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--orange);
+      font-size: 1rem;
+    }
+
+    .why-item h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .why-item p {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    /* ===== HOW IT WORKS ===== */
+    .how-section {
+      background: var(--white);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(to right, var(--orange) 0%, var(--orange) 25%, rgba(232, 163, 75, 0.15) 25%, rgba(232, 163, 75, 0.15) 100%);
+      z-index: 0;
+    }
+
+    .timeline-step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 8px;
+    }
+
+    .step-number {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--ivory);
+      border: 2px solid rgba(232, 163, 75, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--navy);
+      transition: var(--transition);
+    }
+
+    .timeline-step:hover .step-number {
+      background: var(--orange);
+      border-color: var(--orange);
+      transform: scale(1.08);
+    }
+
+    .timeline-step h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .timeline-step p {
+      font-size: 0.85rem;
+      color: var(--steel);
+      line-height: 1.6;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    /* ===== GLOBAL NETWORK ===== */
+    .global-section {
+      background: var(--ivory);
+    }
+
+    .global-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .global-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 3/4;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .global-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .global-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .global-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .global-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(16, 29, 44, 0.85) 0%, rgba(16, 29, 44, 0.1) 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+    }
+
+    .global-card h4 {
+      color: var(--white);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .global-card p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.8rem;
+    }
+
+    /* ===== INQUIRY FORM ===== */
+    .inquiry-section {
+      background: var(--white);
+    }
+
+    .form-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--ivory);
+      border-radius: var(--radius);
+      padding: 56px 48px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-steps {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .form-step-indicator {
+      flex: 1;
+      height: 4px;
+      background: rgba(16, 29, 44, 0.08);
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+
+    .form-step-indicator.active {
+      background: var(--orange);
+    }
+
+    .form-step-indicator.completed {
+      background: var(--steel);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+    }
+
+    .form-group label .required {
+      color: var(--orange);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 14px 16px;
+      border: 1.5px solid rgba(16, 29, 44, 0.12);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-primary);
+      font-size: 0.9rem;
+      background: var(--white);
+      color: var(--navy);
+      transition: var(--transition);
+      outline: none;
+      width: 100%;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(232, 163, 75, 0.15);
+    }
+
+    .form-group input.error,
+    .form-group select.error,
+    .form-group textarea.error {
+      border-color: #dc3545;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .error-message {
+      font-size: 0.75rem;
+      color: #dc3545;
+      display: none;
+    }
+
+    .error-message.visible {
+      display: block;
+    }
+
+    .form-footer {
+      margin-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .form-footer .btn {
+      min-width: 200px;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .form-success.visible {
+      display: block;
+    }
+
+    .form-success .success-icon {
+      font-size: 3.5rem;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+
+    .form-success h3 {
+      margin-bottom: 12px;
+    }
+
+    .form-success p {
+      color: var(--steel);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    /* ===== FINAL CTA ===== */
+    .cta-section {
+      background: var(--navy);
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.6);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .cta-section .btn-primary {
+      padding: 18px 48px;
+      font-size: 1rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #0a1520;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 80px 0 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      margin-bottom: 64px;
+    }
+
+    .footer-brand .logo {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.5);
+      max-width: 320px;
+      margin-bottom: 24px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.6);
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+
+    .footer-social a:hover {
+      background: var(--orange);
+      color: var(--navy);
+      transform: translateY(-3px);
+    }
+
+    .footer h5 {
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+      padding-left: 4px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      align-items: flex-start;
+    }
+
+    .footer-contact-item i {
+      color: var(--orange);
+      margin-top: 4px;
+      font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-legal a {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.35);
+      transition: var(--transition);
+    }
+
+    .footer-legal a:hover {
+      color: var(--orange);
+    }
+
+    /* ===== WHATSAPP FLOAT ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.6rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+      transition: var(--transition);
+      z-index: 999;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .global-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .intro-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .intro-image,
+      .why-image {
+        aspect-ratio: 16/9;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .timeline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+      .timeline::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 64px 0;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--navy);
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      [dir="rtl"] .nav-links {
+        flex-direction: column;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .global-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .timeline-step {
+        display: flex;
+        gap: 20px;
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      [dir="rtl"] .timeline-step {
+        text-align: right;
+      }
+
+      .step-number {
+        margin: 0;
+        flex-shrink: 0;
+        width: 64px;
+        height: 64px;
+        font-size: 1.2rem;
+      }
+
+      .timeline-step p {
+        max-width: 100%;
+      }
+
+      .form-wrapper {
+        padding: 32px 24px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-footer {
+        flex-direction: column;
+      }
+
+      .form-footer .btn {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-stats {
+        gap: 24px;
+      }
+
+      .stat-item h4 {
+        font-size: 1.5rem;
+      }
+
+      .whatsapp-float {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      [dir="rtl"] .whatsapp-float {
+        right: auto;
+        left: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .global-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .global-card {
+        aspect-ratio: 16/9;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="logo">CHO<span>7</span>NA</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" data-i18n="nav_home">Accueil</a>
+        <a href="#about" data-i18n="nav_about">À Propos</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#how" data-i18n="nav_how">Comment ça marche</a>
+        <a href="#global" data-i18n="nav_global">Réseau Mondial</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="ar">AR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a href="#inquiry" class="btn btn-primary btn-sm" data-i18n="nav_cta">Démarrer Votre Projet</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge" data-i18n="hero_badge">Votre Partenaire Commercial International</div>
+        <h1 data-i18n="hero_title">Votre Prochaine<br /><em>Expédition</em> Commence Ici.</h1>
+        <p data-i18n="hero_subtitle">
+          Du sourcing mondial à l'expédition internationale, CHO7NA aide votre entreprise à avancer avec des solutions commerciales et logistiques plus intelligentes.
+        </p>
+        <div class="hero-actions">
+          <a href="#inquiry" class="btn btn-primary" data-i18n="hero_cta1">Démarrer Votre Projet</a>
+          <a href="#services" class="btn btn-outline" data-i18n="hero_cta2">Découvrir Nos Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section class="intro-section section-padding" id="about">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text fade-up">
+          <span class="section-label" data-i18n="intro_label">À Propos de CHO7NA</span>
+          <h2 data-i18n="intro_title">Commerce Mondial. Simplifié.</h2>
+          <p data-i18n="intro_desc">
+            Chez CHO7NA, nous simplifions les affaires internationales en connectant les opportunités, les fournisseurs, les produits et les solutions logistiques. Nous aidons les entreprises à avancer en toute confiance.
+          </p>
+          <p data-i18n="intro_desc2">
+            Notre approche allie expertise du sourcing international, coordination logistique et accompagnement personnalisé pour transformer vos ambitions commerciales en résultats concrets.
+          </p>
+          <div class="intro-stats">
+            <div class="stat-item">
+              <h4>6+</h4>
+              <p data-i18n="intro_stat1">Services Clés</p>
+            </div>
+            <div class="stat-item">
+              <h4>5</h4>
+              <p data-i18n="intro_stat2">Marchés Internationaux</p>
+            </div>
+            <div class="stat-item">
+              <h4>3</h4>
+              <p data-i18n="intro_stat3">Langues Parlées</p>
+            </div>
+          </div>
+        </div>
+        <div class="intro-image fade-up">
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop" alt="Global trade and logistics" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services-section section-padding" id="services">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label" data-i18n="services_label">Nos Services</span>
+        <h2 data-i18n="services_title">Tout Ce Dont Votre Entreprise a Besoin. Un Partenaire de Confiance.</h2>
+        <p class="subheadline" data-i18n="services_subtitle">
+          Des solutions complètes pour vos opérations commerciales et logistiques internationales.
+        </p>
+      </div>
+      <div class="services-grid">
+        <!-- Card 1 -->
+        <div class="service-card fade-up">
+          <div class="service-icon"><i class="fas fa-globe-americas"></i></div>
+          <h3 data-i18n="service1_title">Sourcing Mondial</h3>
+          <p data-i18n="service1_desc">Trouvez des fournisseurs internationaux et découvrez les bons produits pour votre entreprise.</p>
+          <a href="#inquiry" class="service-link" data-i18n="service_link">En Savoir Plus</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="service-card fade-up">
+          <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h3 data-i18n="service2_title">Import & Export</h3>
+          <p data-i18n="service2_desc">Simplifiez les opérations commerciales internationales et l'approvisionnement en produits.</p>
+          <a href="#inquiry" class="service-link" data-i18n="service_link">En Savoir Plus</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="service-card fade-up">
+          <div class="service-icon"><i class="fas fa-ship"></i></div>
+          <h3 data-i18n="service3_title">Expédition Internationale</h3>
+          <p data-i18n="service3_desc">Coordonnez le transport de marchandises et les solutions d'expédition internationale.</p>
+          <a href="#inquiry" class="service-link" data-i18n="service_link">En Savoir Plus</a>
+        </div>
+        <!-- Card 4 -->
+        <div class="service-card fade-up">
+          <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+          <h3 data-i18n="service4_title">Logistique & Douanes</h3>
+          <p data-i18n="service4_desc">Bénéficiez d'un accompagnement pour la coordination, la documentation et les procédures douanières.</p>
+          <a href="#inquiry" class="service-link" data-i18n="service_link">En Savoir Plus</a>
+        </div>
+        <!-- Card 5 -->
+        <div class="service-card fade-up">
+          <div class="service-icon"><i class="fas fa-handshake"></i></div>
+          <h3 data-i18n="service5_title">Commerce de Gros & B2B</h3>
+          <p data-i18n="service5_desc">Connectez les entreprises aux fournisseurs et aux opportunités commerciales internationales.</p>
+          <a href="#inquiry" class="service-link" data-i18n="service_link">En Savoir Plus</a>
+        </div>
+        <!-- Card 6 -->
+        <div class="service-card fade-up">
+          <div class="service-icon"><i class="fas fa-tags"></i></div>
+          <h3 data-i18n="service6_title">Marque Blanche & Développement</h3>
+          <p data-i18n="service6_desc">Explorez les opportunités de développement de produits et de création de votre propre marque.</p>
+          <a href="#inquiry" class="service-link" data-i18n="service_link">En Savoir Plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHO7NA ===== -->
+  <section class="why-section section-padding" id="why">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-image fade-up">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" alt="Logistics coordination" loading="lazy" />
+        </div>
+        <div class="why-content fade-up">
+          <span class="section-label" data-i18n="why_label">Pourquoi CHO7NA</span>
+          <h2 data-i18n="why_title">Plus Qu'une Expédition. Un Partenaire pour Votre Croissance.</h2>
+          <p data-i18n="why_desc">
+            Nous ne nous contentons pas de déplacer des marchandises. Nous construisons des ponts entre votre entreprise et les opportunités mondiales, avec un engagement total envers votre réussite.
+          </p>
+          <div class="why-list">
+            <div class="why-item">
+              <div class="why-item-icon"><i class="fas fa-check"></i></div>
+              <div>
+                <h4 data-i18n="why1_title">Réseau de Sourcing International</h4>
+                <p data-i18n="why1_desc">Accédez à un vaste réseau de fournisseurs et de partenaires à travers le monde.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon"><i class="fas fa-check"></i></div>
+              <div>
+                <h4 data-i18n="why2_title">Processus d'Importation Simplifiés</h4>
+                <p data-i18n="why2_desc">Nous rationalisons les procédures pour rendre vos importations plus fluides et efficaces.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon"><i class="fas fa-check"></i></div>
+              <div>
+                <h4 data-i18n="why3_title">Communication Transparente</h4>
+                <p data-i18n="why3_desc">Des mises à jour claires et régulières à chaque étape de votre projet.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon"><i class="fas fa-check"></i></div>
+              <div>
+                <h4 data-i18n="why4_title">Solutions Commerciales Sur Mesure</h4>
+                <p data-i18n="why4_desc">Des solutions adaptées à vos besoins spécifiques et à vos objectifs commerciaux.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon"><i class="fas fa-check"></i></div>
+              <div>
+                <h4 data-i18n="why5_title">Support Dédié au Projet</h4>
+                <p data-i18n="why5_desc">Un accompagnement personnalisé tout au long de votre projet.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon"><i class="fas fa-check"></i></div>
+              <div>
+                <h4 data-i18n="why6_title">Approche Orientée Business</h4>
+                <p data-i18n="why6_desc">Nous comprenons vos enjeux et travaillons pour des résultats concrets.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-section section-padding" id="how">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label" data-i18n="how_label">Comment Ça Marche</span>
+        <h2 data-i18n="how_title">De Votre Idée à Sa Destination.</h2>
+        <p class="subheadline" data-i18n="how_subtitle">
+          Un processus simple et transparent en quatre étapes pour concrétiser vos projets commerciaux.
+        </p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step fade-up">
+          <div class="step-number">01</div>
+          <div>
+            <h4 data-i18n="step1_title">Dites-Nous Ce Dont Vous Avez Besoin</h4>
+            <p data-i18n="step1_desc">Partagez vos besoins en matière de produits, de sourcing ou d'expédition.</p>
+          </div>
+        </div>
+        <div class="timeline-step fade-up">
+          <div class="step-number">02</div>
+          <div>
+            <h4 data-i18n="step2_title">Nous Trouvons la Bonne Solution</h4>
+            <p data-i18n="step2_desc">Identifiez les fournisseurs et les options logistiques adaptés.</p>
+          </div>
+        </div>
+        <div class="timeline-step fade-up">
+          <div class="step-number">03</div>
+          <div>
+            <h4 data-i18n="step3_title">Nous Coordonnons Votre Projet</h4>
+            <p data-i18n="step3_desc">Gérez les étapes nécessaires et la communication.</p>
+          </div>
+        </div>
+        <div class="timeline-step fade-up">
+          <div class="step-number">04</div>
+          <div>
+            <h4 data-i18n="step4_title">Votre Entreprise Avance</h4>
+            <p data-i18n="step4_desc">Faites progresser votre projet vers sa destination.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GLOBAL NETWORK ===== -->
+  <section class="global-section section-padding" id="global">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label" data-i18n="global_label">Réseau Mondial</span>
+        <h2 data-i18n="global_title">Connecter les Marchés. Créer des Opportunités.</h2>
+        <p class="subheadline" data-i18n="global_subtitle">
+          Nous facilitons le commerce avec des marchés clés à travers le monde.
+        </p>
+      </div>
+      <div class="global-grid">
+        <div class="global-card fade-up">
+          <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=2070&auto=format&fit=crop" alt="China" loading="lazy" />
+          <div class="global-card-overlay">
+            <h4 data-i18n="global_china">Chine</h4>
+            <p data-i18n="global_china_desc">Sourcing & Fabrication</p>
+          </div>
+        </div>
+        <div class="global-card fade-up">
+          <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=2070&auto=format&fit=crop" alt="Turkey" loading="lazy" />
+          <div class="global-card-overlay">
+            <h4 data-i18n="global_turkey">Turquie</h4>
+            <p data-i18n="global_turkey_desc">Commerce & Textile</p>
+          </div>
+        </div>
+        <div class="global-card fade-up">
+          <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=2070&auto=format&fit=crop" alt="Europe" loading="lazy" />
+          <div class="global-card-overlay">
+            <h4 data-i18n="global_europe">Europe</h4>
+            <p data-i18n="global_europe_desc">Marchés & Partenaires</p>
+          </div>
+        </div>
+        <div class="global-card fade-up">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop" alt="UAE" loading="lazy" />
+          <div class="global-card-overlay">
+            <h4 data-i18n="global_uae">Émirats Arabes Unis</h4>
+            <p data-i18n="global_uae_desc">Hub Commercial</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INQUIRY FORM ===== -->
+  <section class="inquiry-section section-padding" id="inquiry">
+    <div class="container">
+      <div class="section-header fade-up" style="text-align:center; max-width:720px; margin:0 auto 48px;">
+        <span class="section-label" data-i18n="inquiry_label">Demande de Projet</span>
+        <h2 data-i18n="inquiry_title">Parlez-Nous de Votre Prochain Projet.</h2>
+        <p class="subheadline" style="margin:16px auto 0;" data-i18n="inquiry_subtitle">
+          Remplissez le formulaire ci-dessous et notre équipe vous contactera dans les plus brefs délais.
+        </p>
+      </div>
+      <div class="form-wrapper fade-up" id="formWrapper">
+        <form id="inquiryForm" novalidate>
+          <div class="form-steps">
+            <div class="form-step-indicator active" data-step="1"></div>
+            <div class="form-step-indicator" data-step="2"></div>
+            <div class="form-step-indicator" data-step="3"></div>
+          </div>
+          <div class="form-grid" id="formStep1">
+            <div class="form-group">
+              <label for="fullName" data-i18n="form_name">Nom Complet <span class="required">*</span></label>
+              <input type="text" id="fullName" name="fullName" required data-i18n-placeholder="form_name_ph" placeholder="Votre nom complet" />
+              <span class="error-message" data-i18n="form_required">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+              <label for="companyName" data-i18n="form_company">Nom de l'Entreprise</label>
+              <input type="text" id="companyName" name="companyName" data-i18n-placeholder="form_company_ph" placeholder="Votre entreprise" />
+            </div>
+            <div class="form-group">
+              <label for="email" data-i18n="form_email">Adresse Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required data-i18n-placeholder="form_email_ph" placeholder="vous@exemple.com" />
+              <span class="error-message" data-i18n="form_email_error">Veuillez entrer un email valide</span>
+            </div>
+            <div class="form-group">
+              <label for="phone" data-i18n="form_phone">Téléphone / WhatsApp <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" required data-i18n-placeholder="form_phone_ph" placeholder="+212 6XX XXX XXX" />
+              <span class="error-message" data-i18n="form_required">Ce champ est requis</span>
+            </div>
+          </div>
+          <div class="form-grid" id="formStep2" style="display:none;">
+            <div class="form-group full-width">
+              <label for="service" data-i18n="form_service">Service Requis <span class="required">*</span></label>
+              <select id="service" name="service" required>
+                <option value="" data-i18n="form_select">Sélectionnez un service</option>
+                <option value="sourcing" data-i18n="service1_title">Sourcing Mondial</option>
+                <option value="import-export" data-i18n="service2_title">Import & Export</option>
+                <option value="shipping" data-i18n="service3_title">Expédition Internationale</option>
+                <option value="logistics" data-i18n="service4_title">Logistique & Douanes</option>
+                <option value="b2b" data-i18n="service5_title">Commerce de Gros & B2B</option>
+                <option value="private-label" data-i18n="service6_title">Marque Blanche & Développement</option>
+              </select>
+              <span class="error-message" data-i18n="form_select_error">Veuillez sélectionner un service</span>
+            </div>
+            <div class="form-group full-width">
+              <label for="productDesc" data-i18n="form_product_desc">Description du Produit <span class="required">*</span></label>
+              <textarea id="productDesc" name="productDesc" required data-i18n-placeholder="form_product_ph" placeholder="Décrivez le produit ou le service recherché..."></textarea>
+              <span class="error-message" data-i18n="form_required">Ce champ est requis</span>
+            </div>
+          </div>
+          <div class="form-grid" id="formStep3" style="display:none;">
+            <div class="form-group">
+              <label for="origin" data-i18n="form_origin">Pays d'Origine</label>
+              <input type="text" id="origin" name="origin" data-i18n-placeholder="form_origin_ph" placeholder="Ex: Chine, Turquie..." />
+            </div>
+            <div class="form-group">
+              <label for="destination" data-i18n="form_destination">Pays de Destination <span class="required">*</span></label>
+              <input type="text" id="destination" name="destination" required data-i18n-placeholder="form_destination_ph" placeholder="Ex: Maroc" />
+              <span class="error-message" data-i18n="form_required">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+              <label for="quantity" data-i18n="form_quantity">Quantité Estimée</label>
+              <input type="text" id="quantity" name="quantity" data-i18n-placeholder="form_quantity_ph" placeholder="Ex: 1000 unités" />
+            </div>
+            <div class="form-group full-width">
+              <label for="additional" data-i18n="form_additional">Informations Supplémentaires</label>
+              <textarea id="additional" name="additional" data-i18n-placeholder="form_additional_ph" placeholder="Détails supplémentaires..."></textarea>
+            </div>
+          </div>
+          <div class="form-footer">
+            <button type="button" class="btn btn-outline-dark" id="prevBtn" style="display:none;" data-i18n="form_prev">Précédent</button>
+            <button type="button" class="btn btn-primary" id="nextBtn" data-i18n="form_next">Suivant</button>
+            <button type="submit" class="btn btn-primary" id="submitBtn" style="display:none;" data-i18n="form_submit">Soumettre Ma Demande</button>
+          </div>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+          <h3 data-i18n="form_success_title">Merci !</h3>
+          <p data-i18n="form_success_desc">Votre demande a bien été envoyée. Notre équipe vous contactera dans les plus brefs délais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="cta-section section-padding">
+    <div class="container fade-up">
+      <h2 data-i18n="cta_title">Faisons Avancer Votre Entreprise.</h2>
+      <p data-i18n="cta_desc">
+        Que vous recherchiez des fournisseurs internationaux, des solutions d'importation ou une coordination logistique fiable, CHO7NA est prêt à vous aider.
+      </p>
+      <a href="#inquiry" class="btn btn-primary" data-i18n="cta_btn">Parlez à Notre Équipe</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">CHO<span>7</span>NA</div>
+          <p data-i18n="footer_tagline">De N'importe Où. Directement Chez Vous.</p>
+          <p data-i18n="footer_desc">
+            CHO7NA est une entreprise moderne de commerce international, sourcing, importation, exportation et logistique connectant les entreprises marocaines aux fournisseurs mondiaux et aux marchés internationaux.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5 data-i18n="footer_nav">Navigation</h5>
+          <div class="footer-links">
+            <a href="#home" data-i18n="nav_home">Accueil</a>
+            <a href="#about" data-i18n="nav_about">À Propos</a>
+            <a href="#services" data-i18n="nav_services">Services</a>
+            <a href="#how" data-i18n="nav_how">Comment ça marche</a>
+            <a href="#global" data-i18n="nav_global">Réseau Mondial</a>
+            <a href="#contact" data-i18n="nav_contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h5 data-i18n="footer_services">Services</h5>
+          <div class="footer-links">
+            <a href="#services" data-i18n="service1_title">Sourcing Mondial</a>
+            <a href="#services" data-i18n="service2_title">Import & Export</a>
+            <a href="#services" data-i18n="service3_title">Expédition Internationale</a>
+            <a href="#services" data-i18n="service4_title">Logistique & Douanes</a>
+            <a href="#services" data-i18n="service5_title">Commerce de Gros & B2B</a>
+            <a href="#services" data-i18n="service6_title">Marque Blanche</a>
+          </div>
+        </div>
+        <div>
+          <h5 data-i18n="footer_contact">Contact</h5>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span data-i18n="footer_address">Casablanca, Maroc</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>contact@cho7na.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+212 6XX XXX XXX</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <span>+212 6XX XXX XXX</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer_copyright">© 2025 CHO7NA. Tous droits réservés.</p>
+        <div class="footer-legal">
+          <a href="#" data-i18n="footer_privacy">Politique de Confidentialité</a>
+          <a href="#" data-i18n="footer_terms">Conditions Générales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOAT ===== -->
+  <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // ===== TRANSLATIONS =====
+    const translations = {
+      fr: {
+        nav_home: "Accueil",
+        nav_about: "À Propos",
+        nav_services: "Services",
+        nav_how: "Comment ça marche",
+        nav_global: "Réseau Mondial",
+        nav_contact: "Contact",
+        nav_cta: "Démarrer Votre Projet",
+        hero_badge: "Votre Partenaire Commercial International",
+        hero_title: "Votre Prochaine<br /><em>Expédition</em> Commence Ici.",
+        hero_subtitle: "Du sourcing mondial à l'expédition internationale, CHO7NA aide votre entreprise à avancer avec des solutions commerciales et logistiques plus intelligentes.",
+        hero_cta1: "Démarrer Votre Projet",
+        hero_cta2: "Découvrir Nos Services",
+        intro_label: "À Propos de CHO7NA",
+        intro_title: "Commerce Mondial. Simplifié.",
+        intro_desc: "Chez CHO7NA, nous simplifions les affaires internationales en connectant les opportunités, les fournisseurs, les produits et les solutions logistiques. Nous aidons les entreprises à avancer en toute confiance.",
+        intro_desc2: "Notre approche allie expertise du sourcing international, coordination logistique et accompagnement personnalisé pour transformer vos ambitions commerciales en résultats concrets.",
+        intro_stat1: "Services Clés",
+        intro_stat2: "Marchés Internationaux",
+        intro_stat3: "Langues Parlées",
+        services_label: "Nos Services",
+        services_title: "Tout Ce Dont Votre Entreprise a Besoin. Un Partenaire de Confiance.",
+        services_subtitle: "Des solutions complètes pour vos opérations commerciales et logistiques internationales.",
+        service1_title: "Sourcing Mondial",
+        service1_desc: "Trouvez des fournisseurs internationaux et découvrez les bons produits pour votre entreprise.",
+        service2_title: "Import & Export",
+        service2_desc: "Simplifiez les opérations commerciales internationales et l'approvisionnement en produits.",
+        service3_title: "Expédition Internationale",
+        service3_desc: "Coordonnez le transport de marchandises et les solutions d'expédition internationale.",
+        service4_title: "Logistique & Douanes",
+        service4_desc: "Bénéficiez d'un accompagnement pour la coordination, la documentation et les procédures douanières.",
+        service5_title: "Commerce de Gros & B2B",
+        service5_desc: "Connectez les entreprises aux fournisseurs et aux opportunités commerciales internationales.",
+        service6_title: "Marque Blanche & Développement",
+        service6_desc: "Explorez les opportunités de développement de produits et de création de votre propre marque.",
+        service_link: "En Savoir Plus",
+        why_label: "Pourquoi CHO7NA",
+        why_title: "Plus Qu'une Expédition. Un Partenaire pour Votre Croissance.",
+        why_desc: "Nous ne nous contentons pas de déplacer des marchandises. Nous construisons des ponts entre votre entreprise et les opportunités mondiales, avec un engagement total envers votre réussite.",
+        why1_title: "Réseau de Sourcing International",
+        why1_desc: "Accédez à un vaste réseau de fournisseurs et de partenaires à travers le monde.",
+        why2_title: "Processus d'Importation Simplifiés",
+        why2_desc: "Nous rationalisons les procédures pour rendre vos importations plus fluides et efficaces.",
+        why3_title: "Communication Transparente",
+        why3_desc: "Des mises à jour claires et régulières à chaque étape de votre projet.",
+        why4_title: "Solutions Commerciales Sur Mesure",
+        why4_desc: "Des solutions adaptées à vos besoins spécifiques et à vos objectifs commerciaux.",
+        why5_title: "Support Dédié au Projet",
+        why5_desc: "Un accompagnement personnalisé tout au long de votre projet.",
+        why6_title: "Approche Orientée Business",
+        why6_desc: "Nous comprenons vos enjeux et travaillons pour des résultats concrets.",
+        how_label: "Comment Ça Marche",
+        how_title: "De Votre Idée à Sa Destination.",
+        how_subtitle: "Un processus simple et transparent en quatre étapes pour concrétiser vos projets commerciaux.",
+        step1_title: "Dites-Nous Ce Dont Vous Avez Besoin",
+        step1_desc: "Partagez vos besoins en matière de produits, de sourcing ou d'expédition.",
+        step2_title: "Nous Trouvons la Bonne Solution",
+        step2_desc: "Identifiez les fournisseurs et les options logistiques adaptés.",
+        step3_title: "Nous Coordonnons Votre Projet",
+        step3_desc: "Gérez les étapes nécessaires et la communication.",
+        step4_title: "Votre Entreprise Avance",
+        step4_desc: "Faites progresser votre projet vers sa destination.",
+        global_label: "Réseau Mondial",
+        global_title: "Connecter les Marchés. Créer des Opportunités.",
+        global_subtitle: "Nous facilitons le commerce avec des marchés clés à travers le monde.",
+        global_china: "Chine",
+        global_china_desc: "Sourcing & Fabrication",
+        global_turkey: "Turquie",
+        global_turkey_desc: "Commerce & Textile",
+        global_europe: "Europe",
+        global_europe_desc: "Marchés & Partenaires",
+        global_uae: "Émirats Arabes Unis",
+        global_uae_desc: "Hub Commercial",
+        inquiry_label: "Demande de Projet",
+        inquiry_title: "Parlez-Nous de Votre Prochain Projet.",
+        inquiry_subtitle: "Remplissez le formulaire ci-dessous et notre équipe vous contactera dans les plus brefs délais.",
+        form_name: "Nom Complet",
+        form_name_ph: "Votre nom complet",
+        form_company: "Nom de l'Entreprise",
+        form_company_ph: "Votre entreprise",
+        form_email: "Adresse Email",
+        form_email_ph: "vous@exemple.com",
+        form_email_error: "Veuillez entrer un email valide",
+        form_phone: "Téléphone / WhatsApp",
+        form_phone_ph: "+212 6XX XXX XXX",
+        form_required: "Ce champ est requis",
+        form_service: "Service Requis",
+        form_select: "Sélectionnez un service",
+        form_select_error: "Veuillez sélectionner un service",
+        form_product_desc: "Description du Produit",
+        form_product_ph: "Décrivez le produit ou le service recherché...",
+        form_origin: "Pays d'Origine",
+        form_origin_ph: "Ex: Chine, Turquie...",
+        form_destination: "Pays de Destination",
+        form_destination_ph: "Ex: Maroc",
+        form_quantity: "Quantité Estimée",
+        form_quantity_ph: "Ex: 1000 unités",
+        form_additional: "Informations Supplémentaires",
+        form_additional_ph: "Détails supplémentaires...",
+        form_prev: "Précédent",
+        form_next: "Suivant",
+        form_submit: "Soumettre Ma Demande",
+        form_success_title: "Merci !",
+        form_success_desc: "Votre demande a bien été envoyée. Notre équipe vous contactera dans les plus brefs délais.",
+        cta_title: "Faisons Avancer Votre Entreprise.",
+        cta_desc: "Que vous recherchiez des fournisseurs internationaux, des solutions d'importation ou une coordination logistique fiable, CHO7NA est prêt à vous aider.",
+        cta_btn: "Parlez à Notre Équipe",
+        footer_tagline: "De N'importe Où. Directement Chez Vous.",
+        footer_desc: "CHO7NA est une entreprise moderne de commerce international, sourcing, importation, exportation et logistique connectant les entreprises marocaines aux fournisseurs mondiaux et aux marchés internationaux.",
+        footer_nav: "Navigation",
+        footer_services: "Services",
+        footer_contact: "Contact",
+        footer_address: "Casablanca, Maroc",
+        footer_copyright: "© 2025 CHO7NA. Tous droits réservés.",
+        footer_privacy: "Politique de Confidentialité",
+        footer_terms: "Conditions Générales"
+      },
+      ar: {
+        nav_home: "الرئيسية",
+        nav_about: "من نحن",
+        nav_services: "خدماتنا",
+        nav_how: "كيف يعمل",
+        nav_global: "الشبكة العالمية",
+        nav_contact: "اتصل بنا",
+        nav_cta: "ابدأ مشروعك",
+        hero_badge: "شريكك التجاري الدولي",
+        hero_title: "شحنتك القادمة<br /><em>تبدأ هنا</em>.",
+        hero_subtitle: "من التوريد العالمي إلى الشحن الدولي، تساعد CHO7NA عملك على التقدم بحلول تجارية ولوجستية أذكى.",
+        hero_cta1: "ابدأ مشروعك",
+        hero_cta2: "اكتشف خدماتنا",
+        intro_label: "عن CHO7NA",
+        intro_title: "التجارة العالمية. ببساطة.",
+        intro_desc: "في CHO7NA، نبسط الأعمال الدولية من خلال ربط الفرص والموردين والمنتجات والحلول اللوجستية. نساعد الشركات على التقدم بثقة.",
+        intro_desc2: "يجمع نهجنا بين خبرة التوريد الدولي والتنسيق اللوجستي والدعم المخصص لتحويل طموحاتك التجارية إلى نتائج ملموسة.",
+        intro_stat1: "خدمات رئيسية",
+        intro_stat2: "أسواق دولية",
+        intro_stat3: "لغات نتحدثها",
+        services_label: "خدماتنا",
+        services_title: "كل ما تحتاجه شركتك. شريك واحد موثوق.",
+        services_subtitle: "حلول شاملة لعملياتك التجارية واللوجستية الدولية.",
+        service1_title: "التوريد العالمي",
+        service1_desc: "اعثر على موردين دوليين واكتشف المنتجات المناسبة لعملك.",
+        service2_title: "الاستيراد والتصدير",
+        service2_desc: "بسّط العمليات التجارية الدولية وشراء المنتجات.",
+        service3_title: "الشحن الدولي",
+        service3_desc: "قم بتنسيق نقل البضائع وحلول الشحن الدولي.",
+        service4_title: "اللوجستيات والجمارك",
+        service4_desc: "احصل على دعم في التنسيق والتوثيق والإجراءات الجمركية.",
+        service5_title: "تجارة الجملة و B2B",
+        service5_desc: "اربط الشركات بالموردين والفرص التجارية الدولية.",
+        service6_title: "العلامة الخاصة وتطوير الأعمال",
+        service6_desc: "استكشف فرص تطوير المنتجات وبناء علامتك التجارية الخاصة.",
+        service_link: "اكتشف المزيد",
+        why_label: "لماذا CHO7NA",
+        why_title: "أكثر من مجرد شحن. شريك في نموك.",
+        why_desc: "نحن لا ننقل البضائع فحسب. نبني جسورًا بين عملك والفرص العالمية، مع التزام كامل بنجاحك.",
+        why1_title: "شبكة توريد دولية",
+        why1_desc: "الوصول إلى شبكة واسعة من الموردين والشركاء حول العالم.",
+        why2_title: "عمليات استيراد مبسطة",
+        why2_desc: "نبسط الإجراءات لجعل وارداتك أكثر سلاسة وكفاءة.",
+        why3_title: "تواصل شفاف",
+        why3_desc: "تحديثات واضحة ومنتظمة في كل مرحلة من مشروعك.",
+        why4_title: "حلول تجارية مخصصة",
+        why4_desc: "حلول مصممة خصيصًا لتلبية احتياجاتك وأهدافك التجارية.",
+        why5_title: "دعم مخصص للمشروع",
+        why5_desc: "دعم مخصص طوال فترة مشروعك.",
+        why6_title: "نهج يركز على الأعمال",
+        why6_desc: "نحن نفهم تحدياتك ونعمل من أجل نتائج ملموسة.",
+        how_label: "كيف يعمل",
+        how_title: "من فكرتك إلى وجهتها.",
+        how_subtitle: "عملية بسيطة وشفافة من أربع خطوات لتحويل مشاريعك التجارية إلى واقع.",
+        step1_title: "أخبرنا بما تحتاجه",
+        step1_desc: "شارك احتياجاتك من المنتجات أو التوريد أو الشحن.",
+        step2_title: "نجد الحل المناسب",
+        step2_desc: "حدد الموردين والخيارات اللوجستية المناسبة.",
+        step3_title: "ننسق مشروعك",
+        step3_desc: "إدارة الخطوات اللازمة والتواصل.",
+        step4_title: "عملك يتقدم",
+        step4_desc: "دفع مشروعك نحو وجهته.",
+        global_label: "الشبكة العالمية",
+        global_title: "ربط الأسواق. خلق الفرص.",
+        global_subtitle: "نسهل التجارة مع الأسواق الرئيسية حول العالم.",
+        global_china: "الصين",
+        global_china_desc: "التوريد والتصنيع",
+        global_turkey: "تركيا",
+        global_turkey_desc: "التجارة والمنسوجات",
+        global_europe: "أوروبا",
+        global_europe_desc: "الأسواق والشركاء",
+        global_uae: "الإمارات العربية المتحدة",
+        global_uae_desc: "مركز تجاري",
+        inquiry_label: "طلب مشروع",
+        inquiry_title: "حدثنا عن مشروعك القادم.",
+        inquiry_subtitle: "املأ النموذج أدناه وسيتصل بك فريقنا في أقرب وقت ممكن.",
+        form_name: "الاسم الكامل",
+        form_name_ph: "اسمك الكامل",
+        form_company: "اسم الشركة",
+        form_company_ph: "شركتك",
+        form_email: "البريد الإلكتروني",
+        form_email_ph: "you@example.com",
+        form_email_error: "يرجى إدخال بريد إلكتروني صالح",
+        form_phone: "الهاتف / واتساب",
+        form_phone_ph: "+212 6XX XXX XXX",
+        form_required: "هذا الحقل مطلوب",
+        form_service: "الخدمة المطلوبة",
+        form_select: "اختر خدمة",
+        form_select_error: "يرجى اختيار خدمة",
+        form_product_desc: "وصف المنتج",
+        form_product_ph: "صف المنتج أو الخدمة التي تبحث عنها...",
+        form_origin: "بلد المنشأ",
+        form_origin_ph: "مثال: الصين، تركيا...",
+        form_destination: "بلد الوجهة",
+        form_destination_ph: "مثال: المغرب",
+        form_quantity: "الكمية التقديرية",
+        form_quantity_ph: "مثال: 1000 وحدة",
+        form_additional: "معلومات إضافية",
+        form_additional_ph: "تفاصيل إضافية...",
+        form_prev: "السابق",
+        form_next: "التالي",
+        form_submit: "إرسال طلبي",
+        form_success_title: "شكرًا لك!",
+        form_success_desc: "تم إرسال طلبك بنجاح. سيتصل بك فريقنا في أقرب وقت ممكن.",
+        cta_title: "لنحرك عملك إلى الأمام.",
+        cta_desc: "سواء كنت تبحث عن موردين دوليين أو حلول استيراد أو تنسيق لوجستي موثوق، فإن CHO7NA مستعد لمساعدتك.",
+        cta_btn: "تحدث إلى فريقنا",
+        footer_tagline: "من أي مكان. مباشرة إليك.",
+        footer_desc: "CHO7NA شركة حديثة للتجارة الدولية والتوريد والاستيراد والتصدير والخدمات اللوجستية تربط الشركات المغربية بالموردين العالميين والأسواق الدولية.",
+        footer_nav: "التنقل",
+        footer_services: "الخدمات",
+        footer_contact: "اتصل بنا",
+        footer_address: "الدار البيضاء، المغرب",
+        footer_copyright: "© 2025 CHO7NA. جميع الحقوق محفوظة.",
+        footer_privacy: "سياسة الخصوصية",
+        footer_terms: "الشروط والأحكام"
+      },
+      en: {
+        nav_home: "Home",
+        nav_about: "About Us",
+        nav_services: "Services",
+        nav_how: "How It Works",
+        nav_global: "Global Network",
+        nav_contact: "Contact",
+        nav_cta: "Start Your Project",
+        hero_badge: "Your International Trade Partner",
+        hero_title: "Your Next<br /><em>Shipment</em> Starts Here.",
+        hero_subtitle: "From global sourcing to international shipping, CHO7NA helps your business move forward with smarter trade and logistics solutions.",
+        hero_cta1: "Start Your Project",
+        hero_cta2: "Discover Our Services",
+        intro_label: "About CHO7NA",
+        intro_title: "Global Trade. Simplified.",
+        intro_desc: "At CHO7NA, we simplify international business by connecting opportunities, suppliers, products, and logistics solutions. We help businesses move forward with confidence.",
+        intro_desc2: "Our approach combines international sourcing expertise, logistics coordination, and personalized support to transform your commercial ambitions into concrete results.",
+        intro_stat1: "Key Services",
+        intro_stat2: "International Markets",
+        intro_stat3: "Languages Spoken",
+        services_label: "Our Services",
+        services_title: "Everything Your Business Needs. One Trusted Partner.",
+        services_subtitle: "Comprehensive solutions for your international trade and logistics operations.",
+        service1_title: "Global Sourcing",
+        service1_desc: "Find international suppliers and discover the right products for your business.",
+        service2_title: "Import & Export",
+        service2_desc: "Simplify international trade operations and product procurement.",
+        service3_title: "International Shipping",
+        service3_desc: "Coordinate cargo transportation and international shipping solutions.",
+        service4_title: "Logistics & Customs",
+        service4_desc: "Get support with shipping coordination, documentation, and customs procedures.",
+        service5_title: "Wholesale & B2B Trade",
+        service5_desc: "Connect businesses with suppliers and international commercial opportunities.",
+        service6_title: "Private Label & Business Development",
+        service6_desc: "Explore opportunities to develop products and build your own brand.",
+        service_link: "Explore More",
+        why_label: "Why CHO7NA",
+        why_title: "More Than Shipping. A Partner in Your Growth.",
+        why_desc: "We don't just move goods. We build bridges between your business and global opportunities, with a total commitment to your success.",
+        why1_title: "International Sourcing Network",
+        why1_desc: "Access a vast network of suppliers and partners worldwide.",
+        why2_title: "Simplified Import Processes",
+        why2_desc: "We streamline procedures to make your imports smoother and more efficient.",
+        why3_title: "Transparent Communication",
+        why3_desc: "Clear and regular updates at every stage of your project.",
+        why4_title: "Tailored Business Solutions",
+        why4_desc: "Solutions adapted to your specific needs and business objectives.",
+        why5_title: "Dedicated Project Support",
+        why5_desc: "Personalized support throughout your project.",
+        why6_title: "Business-Oriented Approach",
+        why6_desc: "We understand your challenges and work for concrete results.",
+        how_label: "How It Works",
+        how_title: "From Your Idea to Its Destination.",
+        how_subtitle: "A simple and transparent four-step process to bring your commercial projects to life.",
+        step1_title: "Tell Us What You Need",
+        step1_desc: "Share your product, sourcing, or shipping requirements.",
+        step2_title: "We Find the Right Solution",
+        step2_desc: "Identify suitable suppliers and logistics options.",
+        step3_title: "We Coordinate Your Project",
+        step3_desc: "Manage the necessary steps and communication.",
+        step4_title: "Your Business Moves Forward",
+        step4_desc: "Move your project toward its destination.",
+        global_label: "Global Network",
+        global_title: "Connecting Markets. Creating Opportunities.",
+        global_subtitle: "We facilitate trade with key markets around the world.",
+        global_china: "China",
+        global_china_desc: "Sourcing & Manufacturing",
+        global_turkey: "Turkey",
+        global_turkey_desc: "Trade & Textiles",
+        global_europe: "Europe",
+        global_europe_desc: "Markets & Partners",
+        global_uae: "United Arab Emirates",
+        global_uae_desc: "Commercial Hub",
+        inquiry_label: "Project Inquiry",
+        inquiry_title: "Tell Us About Your Next Project.",
+        inquiry_subtitle: "Fill out the form below and our team will contact you as soon as possible.",
+        form_name: "Full Name",
+        form_name_ph: "Your full name",
+        form_company: "Company Name",
+        form_company_ph: "Your company",
+        form_email: "Email Address",
+        form_email_ph: "you@example.com",
+        form_email_error: "Please enter a valid email",
+        form_phone: "Phone / WhatsApp",
+        form_phone_ph: "+212 6XX XXX XXX",
+        form_required: "This field is required",
+        form_service: "Service Required",
+        form_select: "Select a service",
+        form_select_error: "Please select a service",
+        form_product_desc: "Product Description",
+        form_product_ph: "Describe the product or service you're looking for...",
+        form_origin: "Origin Country",
+        form_origin_ph: "e.g., China, Turkey...",
+        form_destination: "Destination Country",
+        form_destination_ph: "e.g., Morocco",
+        form_quantity: "Estimated Quantity",
+        form_quantity_ph: "e.g., 1000 units",
+        form_additional: "Additional Information",
+        form_additional_ph: "Additional details...",
+        form_prev: "Previous",
+        form_next: "Next",
+        form_submit: "Submit My Request",
+        form_success_title: "Thank You!",
+        form_success_desc: "Your request has been sent successfully. Our team will contact you shortly.",
+        cta_title: "Let's Move Your Business Forward.",
+        cta_desc: "Whether you're looking for international suppliers, import solutions, or reliable logistics coordination, CHO7NA is ready to help.",
+        cta_btn: "Talk to Our Team",
+        footer_tagline: "From Anywhere. Straight to You.",
+        footer_desc: "CHO7NA is a modern international trade, sourcing, import, export, and logistics company connecting Moroccan businesses with global suppliers and international markets.",
+        footer_nav: "Navigation",
+        footer_services: "Services",
+        footer_contact: "Contact",
+        footer_address: "Casablanca, Morocco",
+        footer_copyright: "© 2025 CHO7NA. All rights reserved.",
+        footer_privacy: "Privacy Policy",
+        footer_terms: "Terms & Conditions"
+      }
+    };
+
+    let currentLang = 'fr';
+
+    // ===== LANGUAGE SWITCHER =====
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.dataset.i18nPlaceholder;
+        if (translations[lang] && translations[lang][key]) {
+          el.placeholder = translations[lang][key];
+        }
+      });
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    // ===== MOBILE NAV TOGGLE =====
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      const icon = mobileToggle.querySelector('i');
+      icon.className = navLinks.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        mobileToggle.querySelector('i').className = 'fas fa-bars';
+      });
+    });
+
+    // ===== SCROLL ANIMATIONS =====
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -60px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-up').forEach(el => {
+      observer.observe(el);
+    });
+
+    // ===== MULTI-STEP FORM =====
+    let currentStep = 1;
+    const totalSteps = 3;
+
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const formSteps = document.querySelectorAll('.form-step-indicator');
+
+    function showStep(step) {
+      currentStep = step;
+      ['formStep1', 'formStep2', 'formStep3'].forEach((id, index) => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = (index + 1 === step) ? 'grid' : 'none';
+      });
+
+      formSteps.forEach((indicator, index) => {
+        indicator.classList.remove('active', 'completed');
+        if (index + 1 === step) indicator.classList.add('active');
+        else if (index + 1 < step) indicator.classList.add('completed');
+      });
+
+      prevBtn.style.display = step > 1 ? 'inline-flex' : 'none';
+      nextBtn.style.display = step < totalSteps ? 'inline-flex' : 'none';
+      submitBtn.style.display = step === totalSteps ? 'inline-flex' : 'none';
+    }
+
+    function validateStep(step) {
+      let valid = true;
+      const stepEl = document.getElementById('formStep' + step);
+      if (!stepEl) return true;
+
+      stepEl.querySelectorAll('input[required], select[required], textarea[required]').forEach(field => {
+        const errorMsg = field.parentElement.querySelector('.error-message');
+        let fieldValid = true;
+
+        if (field.type === 'email') {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          fieldValid = emailRegex.test(field.value.trim());
+        } else if (field.type === 'tel') {
+          fieldValid = field.value.trim().length >= 8;
+        } else {
+          fieldValid = field.value.trim() !== '';
+        }
+
+        field.classList.toggle('error', !fieldValid);
+        if (errorMsg) {
+          errorMsg.classList.toggle('visible', !fieldValid);
+          if (!fieldValid && field.type === 'email') {
+            errorMsg.textContent = translations[currentLang].form_email_error || 'Please enter a valid email';
+          } else if (!fieldValid) {
+            errorMsg.textContent = translations[currentLang].form_required || 'This field is required';
+          }
+        }
+
+        if (!fieldValid) valid = false;
+      });
+
+      return valid;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      if (validateStep(currentStep)) {
+        if (currentStep < totalSteps) showStep(currentStep + 1);
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentStep > 1) showStep(currentStep - 1);
+    });
+
+    document.getElementById('inquiryForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (validateStep(currentStep)) {
+        // Simulate form submission
+        document.getElementById('inquiryForm').style.display = 'none';
+        document.getElementById('formSuccess').classList.add('visible');
+        document.querySelector('.form-steps').style.display = 'none';
+      }
+    });
+
+    // Clear error on input
+    document.querySelectorAll('#inquiryForm input, #inquiryForm select, #inquiryForm textarea').forEach(field => {
+      field.addEventListener('input', () => {
+        field.classList.remove('error');
+        const errorMsg = field.parentElement.querySelector('.error-message');
+        if (errorMsg) errorMsg.classList.remove('visible');
+      });
+    });
+
+    // Initialize first step
+    showStep(1);
+
+    // ===== SMOOTH SCROLL OFFSET FOR STICKY NAV =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          const navHeight = document.querySelector('.navbar').offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
